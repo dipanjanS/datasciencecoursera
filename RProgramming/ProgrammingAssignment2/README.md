@@ -17,14 +17,11 @@ manipulated to preserve state inside of an R object.
 
 This script consists of two functions namely,
 
-     1. makeCacheMatrix() - This function creates a special matrix
-                            object that can cache its inverse.
-     2. cacheSolve()      - This function computes inverse of the special
-                            matrix returned by 'makeCacheMatrix' above.
+     1. makeCacheMatrix() - This function creates a special matrix object that can cache its inverse.
+     2. cacheSolve()      - This function computes inverse of the special matrix returned by 'makeCacheMatrix' above.
 
-<u>__Key points:__</u> If the inverse has already been calculated and the matrix has
-              not changed, then the 'cacheSolve' function should retrieve the
-              inverse of the matrix from the cache.
+<ins>__Key points:__</ins> If the inverse has already been calculated and the matrix has not changed, 
+                           then the 'cacheSolve' function should retrieve the inverse of the matrix from the cache.
 
 
 The first function, `makeVector` creates a special "vector", which is
