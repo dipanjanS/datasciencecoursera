@@ -21,11 +21,11 @@ This script consists of two functions namely,
                             object that can cache its inverse.
      2. cacheSolve()      - This function computes inverse of the special
                             matrix returned by 'makeCacheMatrix' above.
--------------------------------------------------------------------------------
-  Key points: If the inverse has already been calculated and the matrix has
+
+<u>__Key points:__</u> If the inverse has already been calculated and the matrix has
               not changed, then the 'cacheSolve' function should retrieve the
               inverse of the matrix from the cache.
--------------------------------------------------------------------------------
+
 
 The first function, `makeVector` creates a special "vector", which is
 really a list containing a function to
