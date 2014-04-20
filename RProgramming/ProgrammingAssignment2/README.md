@@ -24,84 +24,65 @@ This script consists of two functions namely,
                            then the 'cacheSolve' function should retrieve the inverse of the matrix from the cache.
 
 
-The first function, `makeVector` creates a special "vector", which is
-really a list containing a function to
+The first function, `makeCacheMatrix` creates a special "matrix", which is 
+actually a list consisting of several functions which perform the following operations
 
-1.  set the value of the vector
-2.  get the value of the vector
-3.  set the value of the mean
-4.  get the value of the mean
+1.  set the value of the input matrix.
+2.  get the value of the input matrix.
+3.  set the value of the matrix inverse.
+4.  get the value of the matrix inverse.
 
 <!-- -->
 
-    makeVector <- function(x = numeric()) {
-            m <- NULL
-            set <- function(y) {
-                    x <<- y
-                    m <<- NULL
-            }
-            get <- function() x
-            setmean <- function(mean) m <<- mean
-            getmean <- function() m
-            list(set = set, get = get,
-                 setmean = setmean,
-                 getmean = getmean)
+    makeCacheMatrix <- function(x = matrix()) {
+  
+        inv <- NULL
+  
+        set <- function(y = matrix()){
+            x <<- y
+            inv <<- NULL
+        }
+  
+        get <- function(){
+            x
+        }
+  
+        setinv <- function(i){
+            inv <<- i
+        }
+  
+        getinv <- function(){
+            inv
+        }
+  
+        list(set = set, get = get, setinv = setinv, getinv = getinv)
+
     }
 
-The following function calculates the mean of the special "vector"
-created with the above function. However, it first checks to see if the
-mean has already been calculated. If so, it `get`s the mean from the
-cache and skips the computation. Otherwise, it calculates the mean of
-the data and sets the value of the mean in the cache via the `setmean`
-function.
 
-    cachemean <- function(x, ...) {
-            m <- x$getmean()
-            if(!is.null(m)) {
-                    message("getting cached data")
-                    return(m)
-            }
-            data <- x$get()
-            m <- mean(data, ...)
-            x$setmean(m)
-            m
+The following function calculates the inverse of the "special" matrix, created by the
+'makeCacheMatrix' funtion. However, it first checks to see if the inverse has been
+calculated already. If the inverse matrix is present, then the value is fetched from the
+cache and all other steps are skipped. Otherwise, tf the inverse value is NULL, it means 
+the value is not in the cache and the inverse of the "special" matrix is calculated first
+using the 'solve' function and the inverse matrix value is set in the cache using the 
+`setinv` function.
+
+
+    cacheSolve <- function(x, ...) {
+        
+        inv <- x$getinv()
+  
+        if(!is.null(inv)){
+            message("getting cached data")
+            return(inv)
+        }
+  
+        data <- x$get()
+        inv <- solve(data, ...)
+        x$setinv(inv)
+        inv
+  
     }
 
-### Assignment: Caching the Inverse of a Matrix
-
-Matrix inversion is usually a costly computation and their may be some
-benefit to caching the inverse of a matrix rather than compute it
-repeatedly (there are also alternatives to matrix inversion that we will
-not discuss here). Your assignment is to write a pair of functions that
-cache the inverse of a matrix.
-
-Write the following functions:
-
-1.  `makeCacheMatrix`: This function creates a special "matrix" object
-    that can cache its inverse.
-2.  `cacheSolve`: This function computes the inverse of the special
-    "matrix" returned by `makeCacheMatrix` above. If the inverse has
-    already been calculated (and the matrix has not changed), then the
-    `cachesolve` should retrieve the inverse from the cache.
-
-Computing the inverse of a square matrix can be done with the `solve`
-function in R. For example, if `X` is a square invertible matrix, then
-`solve(X)` returns its inverse.
-
-For this assignment, assume that the matrix supplied is always
-invertible.
-
-In order to complete this assignment, you must do the following:
-
-1.  Clone the GitHub repository containing the stub R files at
-    [https://github.com/rdpeng/ProgrammingAssignment2](https://github.com/rdpeng/ProgrammingAssignment2)
-2.  Edit the R file contained in the git repository and place your
-    solution in that file (please do not rename the file).
-3.  Commit your completed R file into YOUR git repository and push your
-    git branch to your GitHub account.
-4.  Submit to Coursera the URL to your GitHub repository that contains
-    the completed R code for the assignment.
-
-### Grading
-
-This assignment will be graded via peer assessment.
+@Author: Dipanjan Sarkar
