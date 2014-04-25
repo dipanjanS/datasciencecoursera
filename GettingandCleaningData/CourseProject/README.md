@@ -23,7 +23,7 @@ The following are the main steps to be reproduced to execute the scripts and get
  - Download the `run_analysis.R` file from this repository and copy and paste it inside the `UCI HAR Dataset` folder
  - Your folder structure should look as follows
  	```	
-		UCI HAR Dataset                                                                                  
+		UCI HAR Dataset/                                                                                  
    			|                                                                                               
    			|---------- activity_labels.txt                                                                 
    			|---------- features.txt                                                                        
@@ -48,4 +48,14 @@ The following are the main steps to be reproduced to execute the scripts and get
    			              |---------- subject_train.txt  
 
     ``` 
- - Now you should
+ - Now you should execute the `run_analysis.R` script. It can be done in two ways, please use the one you find most convenient.
+         1. Using RStudio
+               - Open up RStudio IDE first and open the `run_analysis.R` script file if you want to see the code.
+               - In the console of RStudio, change the current working directory to the `UCI HAR Dataset` directory using the following command.
+                 Please be careful about the slashes `/` or `\` especially in Windows I would recommend to use the front slash in the path `/`
+                  ```
+                  setwd("Drive name:/Path_to_your_directory/UCI HAR Dataset")
+                  Example ( for my system ) : setwd("E:/MOOCs/Coursera/Data Science - Specialization/Getting and Cleaning Data/Peer Assessment Project/UCI HAR Dataset")
+
+                  ```
+               - Now 
