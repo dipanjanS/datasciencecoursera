@@ -29,12 +29,12 @@ The following are the main steps to be reproduced to execute the scripts and get
    			|---------- features.txt                                                                        
    			|---------- features_info.txt                                                                  
    			|---------- README.txt                                                                  
-   			|---------- __run_analysis.R__                                                                    
+   			|---------- run_analysis.R                                                                    
    			|                                                                                             
    			|---------- test                                                                                
    			|             |---------- Inertial Signals                                             
    			|             |               |---------- Other Files...                               
-                          |                                                   
+            |             |                                                   
    			|             |---------- X_test.txt                                                   
    			|             |---------- y_test.txt                                                  
    			|             |---------- subject_test.txt                                            
