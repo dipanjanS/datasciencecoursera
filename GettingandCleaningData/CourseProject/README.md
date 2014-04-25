@@ -19,4 +19,30 @@ The main objective of this project is to demonstrate our ability to collect, wor
 The following are the main steps to be reproduced to execute the scripts and get the required tidy datasets.
 
  - Download the `UCI HAR Dataset` if you haven't done so already by clicking this link: [Download dataset](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
- - Extract the downloaded zip file to a location of your choice in your system
+ - Extract the downloaded zip file to a location of your choice in your system 
+ - Download the `run_analysis.R` file from this repository and copy and paste it inside the `UCI HAR Dataset` folder
+ - Your folder structure should look as follows
+ 		UCI HAR Dataset                                                                                                
+   			|                                                                                                              
+   			|---------- activity_labels.txt                                                                                
+   			|---------- features.txt                                                                                       
+   			|---------- features_info.txt                                                                                  
+   			|---------- README.txt                                                                                         
+   			|---------- run_analysis.R                                                                                     
+   			|                                                                                                              
+   			|---------- test                                                                                               
+   			|             |---------- Inertial Signals                                                                       
+   			|             |               |---------- Other Files...                                                       
+  			|             |                                                                                                
+   			|             |---------- X_test.txt                                                                           
+   			|             |---------- y_test.txt                                                                           
+   			|             |---------- subject_test.txt                                                                     
+   			|                                                                                                                
+   			|---------- train                                                                                                  
+   			              |---------- Inertial Signals                                                                     
+   			              |               |---------- Other Files...                                                       
+   			              |                                                                                                
+   			              |---------- X_train.txt                                                                            
+   			              |---------- y_train.txt                                                                          
+   			              |---------- subject_train.txt   
+ - Now you should
