@@ -62,5 +62,11 @@ The following are the main steps to be reproduced to execute the scripts and get
 
  	- __Using the Terminal \ Command line:__
       * Open up your command line ( cmd ) or terminal, if on Windows, make sure your R directory is added to your path, else set your path first using the following command in the command line `set path=%PATH%;"c:\Program Files\R\R-3.0.3\bin"`. Note the path to your R installation may be different so change it accordingly.
-      * Now navigate to the `UCI HAR Dataset` directory using the `cd` command, like for my system if by default the prompt is `C:\>` I would first type the drive where my directory is, i.e., `E:` and then I would run the `cd E:/MOOCs/Coursera/Data Science - Specialization/Getting and Cleaning Data/Peer Assessment Project/UCI HAR Dataset` command.           
+      * Now navigate to the `UCI HAR Dataset` directory using the `cd` command, like for my system if by default the prompt is `C:\>` I would first type the drive where my directory is, i.e., `E:` and then I would run the `cd E:/MOOCs/Coursera/Data Science - Specialization/Getting and Cleaning Data/Peer Assessment Project/UCI HAR Dataset` command.  
+      * Now execute the script using the following command in the command line \ terminal `Rscript run_analysis.R` and if you reproduced the above steps correctly, you should see some messages printed by the script on the screen which are self descriptive.
+      * Finally go to the `UCI HAR Dataset` from your file explorer to see the output datasets.  
+ - After running the script by using any one of the above methods, go to the `UCI HAR Dataset` folder as told and you can see some new files, namely, `clean_data.csv` and `tidy_data.csv` which are the two tidy datasets as we were directed to create in the project. The details of the datasets will be explained in the following section below. The `clean_data.txt` and `tidy_data.txt` are just tab-separated text file versions which contain the same data as the CSV files. If needed, open up the files using appropriate applications to examine their contents.   
            
+#### <ins>Script Working & Data Processing Explanations</ins>
+
+text here
