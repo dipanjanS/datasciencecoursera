@@ -51,7 +51,7 @@ The following are the main steps to be reproduced to execute the scripts and get
  - Now you should execute the `run_analysis.R` script. It can be done in two ways, please use the one you find most convenient.
  	- __Using RStudio:__
  	 	* Open up RStudio IDE first and open the `run_analysis.R` script file if you want to see the code.
- 	 	* In the console of RStudio, change the current working directory to the `UCI HAR Dataset` directory using the following command. Please be careful about the slashes `/` or `\` in your path, especially in Windows, I would recommend to use the front slash `/` in the path.
+      * In the console of RStudio, change the current working directory to the `UCI HAR Dataset` directory using the following command. Please be careful about the slashes `/` or `\` in your path, especially in Windows, I would recommend to use the front slash `/` in the path.
 			```
 			setwd("Drive name:/Path_to_your_directory/UCI HAR Dataset")
 			Example ( for my system ) : setwd("E:/MOOCs/Coursera/Data Science - Specialization/Getting and Cleaning Data/Peer Assessment Project/UCI HAR Dataset")
@@ -65,8 +65,12 @@ The following are the main steps to be reproduced to execute the scripts and get
       * Now navigate to the `UCI HAR Dataset` directory using the `cd` command, like for my system if by default the prompt is `C:\>` I would first type the drive where my directory is, i.e., `E:` and then I would run the `cd E:/MOOCs/Coursera/Data Science - Specialization/Getting and Cleaning Data/Peer Assessment Project/UCI HAR Dataset` command.  
       * Now execute the script using the following command in the command line \ terminal `Rscript run_analysis.R` and if you reproduced the above steps correctly, you should see some messages printed by the script on the screen which are self descriptive.
       * Finally go to the `UCI HAR Dataset` from your file explorer to see the output datasets.  
- - After running the script by using any one of the above methods, go to the `UCI HAR Dataset` folder as told and you can see some new files, namely, `clean_data.csv` and `tidy_data.csv` which are the two tidy datasets as we were directed to create in the project. The details of the datasets will be explained in the following section below. The `clean_data.txt` and `tidy_data.txt` are just tab-separated text file versions which contain the same data as the CSV files. If needed, open up the files using appropriate applications to examine their contents.   
+ - After running the script by using any one of the above methods, go to the `UCI HAR Dataset` folder as told and you can see some new files, namely, `clean_data.csv` and `tidy_data.csv` which are the two tidy datasets as we were directed to create in the project. The detailed contents of the datasets are explained in the `CodeBook.md` file. The `clean_data.txt` and `tidy_data.txt` are just tab-separated text file versions which contain the same data as the CSV files. If needed, open up the files using appropriate applications to examine their contents.   
            
-#### <ins>Script Working & Data Processing Explanations</ins>
+#### <ins>Script Working Details</ins>
 
-text here
+The following points highlight the key working of the `run_analysis.R` script in detail and focus is mainly on the working. For more details about data frames, variables and datasets have been discussed in the `CodeBook.md` file. Please refer to it as and when needed.
+
+ - First it reads in the required feature data from the files `X_train.txt` and `X_test.txt` and combines them to form the `featureData` data frame with dimensions of `10299 x 561`
+ - Next, it reads in the respective activity identifiers from the files `y_train.txt` and `y_test.txt` and combines them to form the  `activityLabels` data frame with dimensions of `10299 x 1`
+ 
