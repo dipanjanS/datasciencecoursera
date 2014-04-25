@@ -22,7 +22,7 @@ The following are the main steps to be reproduced to execute the scripts and get
  - Extract the downloaded zip file to a location of your choice in your system 
  - Download the `run_analysis.R` file from this repository and copy and paste it inside the `UCI HAR Dataset` folder
  - Your folder structure should look as follows
- 		UCI HAR Dataset                                                                                                
+ 	```	UCI HAR Dataset                                                                                                
    			|                                                                                                              
    			|---------- activity_labels.txt                                                                                
    			|---------- features.txt                                                                                       
@@ -44,5 +44,6 @@ The following are the main steps to be reproduced to execute the scripts and get
    			              |                                                                                                
    			              |---------- X_train.txt                                                                            
    			              |---------- y_train.txt                                                                          
-   			              |---------- subject_train.txt   
+   			              |---------- subject_train.txt  
+    ``` 
  - Now you should
