@@ -1,6 +1,3 @@
-## Course Project
+### Getting & Cleaning Data Course Project
 
-Initial commit.
-
-
--- Dipanjan
+test text
