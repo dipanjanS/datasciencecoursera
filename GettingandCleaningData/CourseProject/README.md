@@ -62,5 +62,5 @@ The following are the main steps to be reproduced to execute the scripts and get
 
  	- __Using the Terminal \ Command line:__
       * Open up your command line ( cmd ) or terminal, if on Windows, make sure your R directory is added to your path, else set your path first using the following command in the command line `set path=%PATH%;"c:\Program Files\R\R-3.0.3\bin"`. Note the path to your R installation may be different so change it accordingly.
-      * Now navigate to the `UCI HAR Dataset directory using the `cd` command, like for my system if by default the prompt is `C:\>` I would first type the drive where my directory is, i.e., `E:` and then I would run the `cd E:/MOOCs/Coursera/Data Science - Specialization/Getting and Cleaning Data/Peer Assessment Project/UCI HAR Dataset` command.           
+      * Now navigate to the `UCI HAR Dataset` directory using the `cd` command, like for my system if by default the prompt is `C:\>` I would first type the drive where my directory is, i.e., `E:` and then I would run the `cd E:/MOOCs/Coursera/Data Science - Specialization/Getting and Cleaning Data/Peer Assessment Project/UCI HAR Dataset` command.           
            
