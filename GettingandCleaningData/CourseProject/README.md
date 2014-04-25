@@ -34,7 +34,7 @@ The following are the main steps to be reproduced to execute the scripts and get
    			|---------- test                                                                                
    			|             |---------- Inertial Signals                                             
    			|             |               |---------- Other Files...                               
-  			   |             |                                                                              
+                                                                             
    			|             |---------- X_test.txt                                                   
    			|             |---------- y_test.txt                                                  
    			|             |---------- subject_test.txt                                            
