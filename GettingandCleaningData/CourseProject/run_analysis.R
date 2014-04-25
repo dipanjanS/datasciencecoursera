@@ -1,61 +1,64 @@
-########################################### QUICK README #####################################################
-# 
-# @author: Dipanjan Sarkar
-#
-# This script works on the UCI HAR Dataset and produces two tidy data sets as a part of 
-# the requirements for the course project of "Getting and Cleaning Data" of the JHU Data 
-# Science Specialization track.
-# 
-# Important Instructions: Please place this file inside the UCI HAR Dataset folder after extracting it
-# ----------------------- from the zip file with the link provided in the Coursera page or you can go 
-# here and download it from the following link given below.
-# [ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip ]
-#
-# The final folder structure should be as follows.
-#
-#   UCI HAR Dataset
-#   |
-#   |---------- activity_labels.txt
-#   |---------- features.txt
-#   |---------- features_info.txt
-#   |---------- README.txt
-#   |---------- run_analysis.R
-#   |
-#   |---------- test
-#   |             |---------- Inertial Signals
-#   |             |               |---------- Other Files...
-#   |             |---------- X_test.txt
-#   |             |---------- y_test.txt
-#   |             |---------- subject_test.txt
-#   |
-#   |---------- train
-#   |             |---------- Inertial Signals
-#   |             |               |---------- Other Files...
-#   |             |---------- X_train.txt
-#   |             |---------- y_train.txt
-#   |             |---------- subject_train.txt
-#
-#   1. If you open this file in RStudio please remember to execute the following commands in the
-#      R console below to run this script
-#        >  setwd("Drive name:/Path_to_your_directory/UCI HAR Dataset")
-#        >  source("run_analysis.R",chdir=TRUE)
-#
-#
-#   2. Else if executing script from the terminal, go to the UCI HAR Dataset directory using cd
-#      command and execute the following command from the terminal
-#      bash$  Rscript run_analysis.R
-#
-#   NOTE: You need to use any one of the above methods to execute the script and the output tidy data
-#         will be created in the UCI HAR Dataset directory itself.
-#
-#   Output: 
-#   -------
-#   1st dataset - clean_data.csv \ clean_data.txt [ contains features which are only mean and std ]
-#   2nd dataset - tidy_data.csv \ tidy_data.txt   [ contains avg of mean & std features per person per activity ]
-#
+############################################### QUICK README #######################################################
+#                                                                                                                  #
+# @author: Dipanjan Sarkar                                                                                         #
+#                                                                                                                  #  
+# This script works on the UCI HAR Dataset and produces two tidy data sets as a part of                            #  
+# the requirements for the course project of "Getting and Cleaning Data" of the JHU Data                           #
+# Science Specialization track.                                                                                    #  
+#                                                                                                                  #
+# Important Instructions: Please place this file inside the UCI HAR Dataset folder after extracting it             #    
+# ----------------------- from the zip file with the link provided in the Coursera page or you can go              #  
+# here and download it from the following link given below.                                                        #
+# [ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip ]                       #
+#                                                                                                                  #  
+# The final folder structure should be as follows.                                                                 #
+#                                                                                                                  #    
+#   UCI HAR Dataset                                                                                                #
+#   |                                                                                                              #
+#   |---------- activity_labels.txt                                                                                #
+#   |---------- features.txt                                                                                       #
+#   |---------- features_info.txt                                                                                  #
+#   |---------- README.txt                                                                                         #
+#   |---------- run_analysis.R                                                                                     #
+#   |                                                                                                              #
+#   |---------- test                                                                                               #
+#   |             |---------- Inertial Signals                                                                     #  
+#   |             |               |---------- Other Files...                                                       #
+#   |             |                                                                                                #
+#   |             |---------- X_test.txt                                                                           #
+#   |             |---------- y_test.txt                                                                           #
+#   |             |---------- subject_test.txt                                                                     #
+#   |                                                                                                              #  
+#   |---------- train                                                                                              #    
+#   |             |---------- Inertial Signals                                                                     #
+#   |             |               |---------- Other Files...                                                       #
+#   |             |                                                                                                #
+#   |             |---------- X_train.txt                                                                          #  
+#   |             |---------- y_train.txt                                                                          #
+#   |             |---------- subject_train.txt                                                                    #
+#                                                                                                                  #
+#                                                                                                                  #
+#   1. If you open this file in RStudio please remember to execute the following commands in the                   #
+#      R console below to run this script                                                                          #
+#        >  setwd("Drive name:/Path_to_your_directory/UCI HAR Dataset")                                            #
+#        >  source("run_analysis.R",chdir=TRUE)                                                                    #
+#                                                                                                                  #
+#                                                                                                                  #
+#   2. Else if executing script from the terminal, go to the UCI HAR Dataset directory using cd                    #    
+#      command and execute the following command from the terminal                                                 #
+#      bash$  Rscript run_analysis.R                                                                               #
+#                                                                                                                  #  
+#   NOTE: You need to use any one of the above methods to execute the script and the output tidy data              #
+#         will be created in the UCI HAR Dataset directory itself.                                                 #
+#                                                                                                                  #
+#   Output:                                                                                                        #
+#   -------                                                                                                        #
+#   1st dataset - clean_data.csv \ clean_data.txt [ contains features which are only mean and std ]                #
+#   2nd dataset - tidy_data.csv \ tidy_data.txt   [ contains avg of mean & std features per person per activity ]  #
+#                                                                                                                  #
 ####################################################################################################################
 
-#dirPath <- "E:/MOOCs/Coursera/Data Science - Specialization/Getting and Cleaning Data/Peer Assessment Project/UCI HAR Dataset/"
+
 
 dirPath <- getwd()
 
