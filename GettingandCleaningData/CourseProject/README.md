@@ -16,4 +16,7 @@ The main objective of this project is to demonstrate our ability to collect, wor
 
 #### <ins>Script Execution Instructions</ins>
 
-The following are
+The following are the main steps to be reproduced to execute the scripts and get the required tidy datasets.
+
+ - Download the `UCI HAR Dataset` if you haven't done so already by clicking this link: [Download dataset](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+ - Extract the downloaded zip file to a location of your choice in your system
