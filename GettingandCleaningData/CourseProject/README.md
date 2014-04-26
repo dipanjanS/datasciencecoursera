@@ -86,9 +86,10 @@ The following points highlight the key working of the `run_analysis.R` script in
 
 #### <ins>Tidy Dataset Details</ins>
 
-You can view the tidy datasets in both `csv` and `txt` format in the `TidyDatasets` directory in this repository. If the file is too big you may need to download it. However, you can directly view the required tidy dataset at the end of step 5 ( Tidy Dataset 2 ) in the project instructions directly from inside Github.
+You can view the tidy datasets in both `csv` and `txt` format in the `TidyDatasets` directory in this repository. If the file is too big you may need to download it. However, you can directly view the required tidy dataset at the end of step 5 ( Tidy Dataset 2 ) in the project instructions directly from inside Github. If you want to see more details about the tidy dataset including its variables you can click on the `Go to the CodeBook` link below.
 
   * [View Final Tidy Dataset](https://github.com/dipanjanS/datasciencecoursera/blob/master/GettingandCleaningData/CourseProject/TidyDatasets/tidy_data.csv)
+  * [Go to the CodeBook](https://github.com/dipanjanS/datasciencecoursera/blob/master/GettingandCleaningData/CourseProject/CodeBook.md)
 
 __@Author:__ Dipanjan Sarkar
 
