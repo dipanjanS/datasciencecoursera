@@ -50,12 +50,12 @@ The folder structure of the dataset is as follows
 
 A brief description of the data files are provided below.
 
-- 'features_info.txt': Shows information about the variables used on the feature vector.
-- 'features.txt': List of all features.
-- 'activity_labels.txt': Links the class labels with their activity name.
-- 'train/X_train.txt': Training set.
-- 'train/y_train.txt': Training labels.
-- 'test/X_test.txt': Test set.
-- 'test/y_test.txt': Test labels.
-- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.
-- 'test/subject_test.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.
+- `features_info.txt`: Shows information about the variables used on the feature vector.
+- `features.txt`: List of all feature names.
+- `activity_labels.txt`: Links the activity class labels with their activity name.
+- `train/X_train.txt`: Training set of all the 561 features. Features are normalized and bounded within [-1,1].
+- `train/y_train.txt`: Training labels of activities. Range is from 1 to 6.
+- `test/X_test.txt`: Test set of all the 561 features. Features are normalized and bounded within [-1,1].
+- `test/y_test.txt`: Test labels of activities. Range is from 1 to 6.
+- `train/subject_train.txt`: Each row identifies the subject who performed the activity for each window sample. Range is from 1 to 30.
+- `test/subject_test.txt`: Each row identifies the subject who performed the activity for each window sample. Range is from 1 to 30.
