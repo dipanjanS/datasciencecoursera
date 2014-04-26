@@ -85,8 +85,10 @@ The following points highlight the key working of the `run_analysis.R` script in
 
 
 
- __@Author:__ Dipanjan Sarkar
+__@Author:__ Dipanjan Sarkar
+
 If there are any issues with understanding or running the code, please contact me using the following links.
+ 
  - Email ID: dipanzan.sarkar@gmail.com
  - Linkedin: http://www.linkedin.com/in/dipanzan
  - Facebook: https://www.facebook.com/DipanzanXarkar
