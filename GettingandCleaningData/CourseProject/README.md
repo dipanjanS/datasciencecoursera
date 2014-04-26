@@ -73,4 +73,20 @@ The following points highlight the key working of the `run_analysis.R` script in
 
  - First it reads in the required feature data from the files `X_train.txt` and `X_test.txt` and combines them to form the `featureData` data frame with dimensions of `10299 x 561`
  - Next, it reads in the respective activity identifiers from the files `y_train.txt` and `y_test.txt` and combines them to form the  `activityLabels` data frame with dimensions of `10299 x 1`
- 
+ - Next, it reads in the respective subject identifiers ( people ) from the files `subject_train.txt` and `subject_test.txt` and combines them to form the  `subjectLabels` data frame with dimensions of `10299 x 1`
+ - Next, it reads in the feature names from the files `features.txt` and stores it in the `featureNames` vector with dimensions of `561 x 1`. From this, we get the required feature indices using the `grep` command for features having mean and std and store the indices in the `reqdfeatureIndices` vector of size `66 x 1`
+ - Then, we get the required subset of features from `featureData` using the `reqdfeatureIndices` vector and get our final feature set with dimensions of `10299 x 66`
+ - Now, we read the different activity names corresponding to the activity identifiers from the `activity_labels.txt` file and transform the activity ids in the `activityLabels` data frame to form a new data frame `activityData` of size `10299 x 1`
+ - Finally we combine the three dataframes, `subjectLabels`, `activityData` and `featureData` to form the data frame `cleanData` with dimensions `10299 x 68`. This is the first required tidy data set and we write it to the files `clean_data.csv` and `clean_data.txt` both having the same content.
+ - Now, we load the `reshape2` package which will be required for creating the next tidy data set.
+ - Next, we set our identifier and measure variables as `idVars` and `measureVars` respectively and then we convert our `cleanData` data frame into a molten data frame `meltedData` with dimensions of `679734 x 4` using the `melt` function.
+ - Now, we decast our molten data frame into the required aggregated data frame where each feature is averaged per person ( `subjectid` ) per activity ( `activityname` ) and we get our second required tidy data set `tidyData` which is a data frame having dimensions `180 x 68`
+ - We write this tidy data set to the files `tidy_data.csv` and `tidy_data.txt` both having the same content.
+
+
+
+ __@Author:__ Dipanjan Sarkar
+If there are any issues with understanding or running the code, please contact me using the following links.
+ - Email ID: dipanzan.sarkar@gmail.com
+ - Linkedin: http://www.linkedin.com/in/dipanzan
+ - Facebook: https://www.facebook.com/DipanzanXarkar
