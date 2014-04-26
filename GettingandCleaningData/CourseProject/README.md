@@ -84,6 +84,12 @@ The following points highlight the key working of the `run_analysis.R` script in
  - We write this tidy data set to the files `tidy_data.csv` and `tidy_data.txt` both having the same content.
 
 
+#### <ins>Tidy Dataset Details</ins>
+
+You can view the tidy datasets in both `csv` and `txt` format in the `TidyDatasets` directory in this repository. If the file is too big you may need to download it. However, you can directly view the required tidy dataset at the end of step 5 ( Tidy Dataset 2 ) in the project instructions directly from inside Github.
+
+ * [View Tidy Dataset 1](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+ * [View Tidy Dataset 2](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
 __@Author:__ Dipanjan Sarkar
 
