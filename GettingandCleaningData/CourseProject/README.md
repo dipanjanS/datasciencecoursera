@@ -80,7 +80,7 @@ The following points highlight the key working of the `run_analysis.R` script in
  - Finally we combine the three dataframes, `subjectLabels`, `activityData` and `featureData` to form the data frame `cleanData` with dimensions `10299 x 68`. This is the first required tidy data set and we write it to the files `clean_data.csv` and `clean_data.txt` both having the same content.
  - Now, we load the `reshape2` package which will be required for creating the next tidy data set.
  - Next, we set our identifier and measure variables as `idVars` and `measureVars` respectively and then we convert our `cleanData` data frame into a molten data frame `meltedData` with dimensions of `679734 x 4` using the `melt` function.
- - Now, we decast our molten data frame into the required aggregated data frame where each feature is averaged per person ( `subjectid` ) per activity ( `activityname` ) and we get our second required tidy data set `tidyData` which is a data frame having dimensions `180 x 68`
+ - Now, we decast our molten data frame into the required aggregated data frame where each feature is averaged per person ( `subjectid` ) per activity ( `activityname` ) using the `dcast` function, and we get our second required tidy data set `tidyData` which is a data frame having dimensions `180 x 68`
  - We write this tidy data set to the files `tidy_data.csv` and `tidy_data.txt` both having the same content.
 
 
